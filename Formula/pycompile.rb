@@ -1,35 +1,34 @@
 class Pycompile < Formula
   desc "Compile Python source files into standalone native binaries"
   homepage "https://github.com/ramackersjp/pycompile"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/ramackersjp/pycompile/releases/download/v0.1.0/pycompile-aarch64-apple-darwin.tar.gz"
-      sha256 "0aa36fef266de367fb151d6cfd46ca991d3ecb0f60f79bd3cde302114f9221bc"
+      url "https://github.com/ramackersjp/pycompile/releases/download/v0.2.0/pycompile-aarch64-apple-darwin.tar.gz"
+      sha256 "f41a52e13825fcdd08824f2c3424b0265f23b3c3beae09337692b99f6417c3b5"
     end
     on_intel do
-      url "https://github.com/ramackersjp/pycompile/releases/download/v0.1.0/pycompile-x86_64-apple-darwin.tar.gz"
-      sha256 "1a384ca3b680aa566badfc88df67857bfe1a03ef63922fa3e1dd0d1529ddbd67"
+      url "https://github.com/ramackersjp/pycompile/releases/download/v0.2.0/pycompile-x86_64-apple-darwin.tar.gz"
+      sha256 "5a92f09557635ab1a22e4739c0919fde24790ec93e5aaf6091ce43751a4b4c1c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ramackersjp/pycompile/releases/download/v0.1.0/pycompile-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "749abe7e67b194facf26ce9056b63a20bb9d0a3f8107c7a4b70950e852399b3b"
+      url "https://github.com/ramackersjp/pycompile/releases/download/v0.2.0/pycompile-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "46af361406a9cdad74e4fd40216c0be62d912ef57dca0dde610b78a02f636d37"
     end
     on_intel do
-      url "https://github.com/ramackersjp/pycompile/releases/download/v0.1.0/pycompile-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b901c1bf98bef7a4719100154b855c4b131e42c6a207d5ca0fcd4eda7ea903de"
+      url "https://github.com/ramackersjp/pycompile/releases/download/v0.2.0/pycompile-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "68ecd39fd87b4d20a8756b73ef7dbe77967056ad253b8a4b4fc7c329693cec98"
     end
   end
 
   def install
-    bin.install "pycompile", "python_compiler"
+    bin.install "pycompile"
     man1.install "pycompile.1" => "pycompile.1"
-    man1.install "pycompile.1" => "python_compiler.1"
   end
 
   test do
